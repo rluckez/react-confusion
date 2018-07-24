@@ -66,6 +66,7 @@ class DishDetail extends Component {
         <div></div>
       )
     }
+    
   }
 
 }
