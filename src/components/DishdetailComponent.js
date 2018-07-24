@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Card, CardBody, CardImg, CardText, CardTitle} from "reactstrap";
 
+import * as moment from 'moment';
+
 class DishDetail extends Component {
 
   constructor(props) {
@@ -51,13 +53,15 @@ class DishDetail extends Component {
   render() {
     if (this.props.dish != null) {
       return (
-        <div className="row">
-          <div className="col-12 col-md-5 m-1">
-            {this.renderDish(this.props.dish)}
-          </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-5 m-1">
+              {this.renderDish(this.props.dish)}
+            </div>
 
-          <div className="col-12 col-md-5 m-1">
-            {this.renderComments(this.props.dish.comments || [])}
+            <div className="col-12 col-md-5 m-1">
+              {this.renderComments(this.props.dish.comments || [])}
+            </div>
           </div>
         </div>
       );
@@ -66,7 +70,6 @@ class DishDetail extends Component {
         <div></div>
       )
     }
-    
   }
 
 }
