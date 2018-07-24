@@ -1,20 +1,11 @@
 import React, {Component} from 'react';
 import {Card, CardBody, CardImg, CardText, CardTitle} from "reactstrap";
-
 import * as moment from 'moment';
 
 class DishDetail extends Component {
 
   constructor(props) {
     super(props);
-  }
-
-  componentDidUpdate(prevProps) {
-    // console.log(prevProps)
-    // Typical usage (don't forget to compare props):
-    // if (this.props.dish !== prevProps.dish) {
-    //   this.render()
-    // }
   }
 
   renderDish(dish) {
@@ -35,7 +26,7 @@ class DishDetail extends Component {
       return (
         <div key={comment.id}>
           <li className="mt-2 mb-2">{comment.comment}</li>
-          <li>-- {comment.author}, {comment.date}</li>
+          <li>-- {comment.author}, {moment(comment.date).format('MMM DD, YYYY')}</li>
         </div>
       );
     });
