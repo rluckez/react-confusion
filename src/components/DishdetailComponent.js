@@ -144,9 +144,7 @@ class CommentForm extends Component {
               <Row className="form-group">
                 <Label htmlFor="yourname" md={12}>Your Name</Label>
                 <Col md={12}>
-                  <Control.text model=".yourname" id="yourname" name="yourname"
-                                placeholder="Your Name"
-                                className="form-control"
+                  <Control.text model=".yourname" id="yourname" name="yourname" placeholder="Your Name" className="form-control"
                                 validators={{
                                   required, minLenght: minLenght(3), maxLenght: maxLenght(15)
                                 }}
@@ -161,9 +159,7 @@ class CommentForm extends Component {
               <Row className="form-group">
                 <Label htmlFor="comment" md={12}>Comment</Label>
                 <Col md={12}>
-                  <Control.textarea model=".comment" id="comment" name="comment"
-                                    rows="12"
-                                    className="form-control"/>
+                  <Control.textarea model=".comment" id="comment" name="comment" rows="6" className="form-control"/>
                 </Col>
               </Row>
               <Row className="form-group">
